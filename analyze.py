@@ -40,7 +40,7 @@ def predict(img_dir, model):
         pred_label = decoded[0][0][0]
         # print(pred_label)
         y_pred.append(pred_label)
-        tokens = img_path.split(os.pathsep)
+        tokens = img_path.split('/')
         class_id = int(tokens[-2])
         # print(str(class_id))
         y_test.append(class_id)
@@ -125,3 +125,4 @@ if __name__ == '__main__':
                           title='Normalized confusion matrix')
 
     plt.show()
+    pass
